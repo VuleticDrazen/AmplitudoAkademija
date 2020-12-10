@@ -1,0 +1,58 @@
+body{
+	font-size: 20px;
+	font-family: sans-serif;
+    color: #333;
+    background-color: blanchedalmond;
+    background-image: url(https://www.bypeople.com/wp-content/uploads/2014/05/light-live-background-css.jpg)
+}
+.pitanje{
+	/* prikaz teksta pitanja */
+	font-weight: 600;
+}
+.odgovori {
+	/* div gdje se nalaze svi odgovori */
+  margin-bottom: 20px;
+}
+.odgovori label{
+	/* labela u kojoj se nalazi input i tekst ponudjenog odgovora */
+  display: block;
+}
+#kviz{
+	/* div u kome se nalaze pitanja i ponudjeni odgovori */
+	margin: 30px;
+}
+#rezultat{
+	/* div u kome se nalazi ucinak igraca na kraju igre */
+    margin: 30px;
+    font-size: large;
+    color: blue;
+}
+#zavrsi{
+	/* dugme za kraj igre */
+	font-family: sans-serif;
+	font-size: 20px;
+	background-color: #279;
+	color: #fff;
+	border: 0px;
+	border-radius: 3px;
+	padding: 10px;
+	cursor: pointer;
+	margin: 20px;
+}
+#zavrsi:hover{
+	background-color: #38a;
+}
+
+#timer {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    font-size: 25px;
+    color: #fff;
+    text-align: center;
+    background: linear-gradient(#337aff,#ff0066);
+    position: sticky;
+    float: right;
+    top: 0%;
+}

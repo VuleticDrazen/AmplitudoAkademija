@@ -28,9 +28,6 @@ const pitanja = [
         c: "Tomas Edison"
       },
       tacanOdgovor: "b",
-      get: function() {
-          return pitanje;
-      }
     },
     {
         pitanje: "Koje godine je osnovana kompanija Ford?",

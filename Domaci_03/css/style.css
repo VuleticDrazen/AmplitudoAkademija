@@ -1,0 +1,68 @@
+p{
+  text-align: center;
+  
+}
+body {
+  font: 1em/1.5, sans-serif;
+  color:#000;
+  background: black;
+
+}
+label { 
+  float: left; 
+} 
+
+span { 
+  display: block; 
+  overflow: hidden; 
+  float: inline-start;
+} 
+
+
+.card-container {
+  overflow: hidden;
+}
+
+.card {
+  background-color: yellow;
+  color: black;
+  min-height: 100%; 
+  width: 100%;
+  float: right;
+  height: 100%;
+  margin: 0 20px;
+
+  
+}
+
+.card-title {
+  font-size: 30px;
+  text-align: center;
+  font-weight: bold;
+  padding-top: 20px;
+}
+
+.card-desc {
+  padding: 10px;
+  text-align: left;
+  font-size: 18px;
+}
+
+.card-image {
+  display: inline-flex;
+}
+
+div.card-image img {
+  width: 70%;
+  height: auto;
+}
+fieldset {
+    
+  font-family: sans-serif;
+}
+legend {
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 40px;
+}

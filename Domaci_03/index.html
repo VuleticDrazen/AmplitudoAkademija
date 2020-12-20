@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Movie Search</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+
+  <div class="bs-component" >
+    <form class="search-form" id="search-by-title-form" onsubmit="return false;">
+    <fieldset>
+        <legend ><i class="fa fa-film" style="color: antiquewhite; font-size: 28px;">The Open Movie DataBase</i></legend>
+        <h5 style="text-align: center;font-size: 16px; color:yellow;">Sve informacije o Vasim omiljenim filmovima i serijama na jednom mjestu</h5>
+    </fieldset>
+    <div style="text-align: center;">
+       <input type="text" id="pretraga" name="t" class="input-small">
+    
+        <select name="type" id="tip"> 
+            <option value="movie" selected>Film</option>
+            <option value="series">Serija</option>
+          </select>
+
+        <input type="text" id="godina" name="y" class="input-small" style="width: 100px;">
+        
+        <button type="submit" id="submit" class="btn btn-warning"><i class="fa fa-search">Pretrazi</i></button>
+        
+       
+    </div>
+    
+    </form>
+</div>
+  
+
+
+  <div class="main-content clearfix mt-5" id="movies"></div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="js/app.js" type="text/javascript"></script>
+</body>
+</html>

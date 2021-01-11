@@ -1,0 +1,93 @@
+<!--ime+prezime+grad(padlista)+dobra/iline(checkbox)+textarea za zelju-->
+<!--kada se forma popuni, sabmituje se na skriptu sacuvaj zelju-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./js/snijeg.js"></script>
+    <title>Pismo Deda Mrazu</title>
+    
+</head>
+<body>
+  
+    <div id="outer">
+      <h1>Želje za Deda Mraza</h1>
+      <div class="inner"> <button type="button" class="btn btn-primary btn-lg" id="dijete">Napiši želju</button></div>
+      <div class="inner"> <button type="button" class="btn btn-danger btn-lg" id="dedamraz">Deda Mraz</button></div>
+    </div>
+
+    <div id="forma" style="display: none;">
+      <form action="sacuvaj_zelju.php" method="POST">
+
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="UnosIme">Unesite svoje ime</label>
+            <input class="form-control" id="unosIme" placeholder="Janko" name="ime">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="UnosPrezime">Unesite svoje prezime</label>
+            <input class="form-control" id="unosPrezime" placeholder="Jankovic" name="prezime">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputAddress">Unesite svoju adresu</label>
+            <input type="text" class="form-control" id="inputAddress" placeholder="Bulevar Sv. Petra Cetinjskog 56" name="adresa">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputGrad">Odaberite grad u kom živite</label>
+            <select name="grad" id="inputState" class="form-control">
+              <option value="">--</option>
+              <option value="Podgorica">Podgorica</option>
+              <option value="Bar">Bar</option>
+              <option value="Budva">Budva</option>
+              <option value="Zabljak">Zabljak</option>
+              <option value="Cetinje">Cetinje</option>
+              <option value="Kotor">Kotor</option>
+              <option value="Kolasin">Kolasin</option>
+              <option value="Niksic">Niksic</option>
+              <option value="Plav">Plav</option>
+              <option value="Pljevlja">Pljevlja</option>
+              <option value="Ulcinj">Ulcinj</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group" style="width: 50%;">
+          <label for="exampleFormControlTextarea1">Napišite svoju želju</label>
+          <textarea class="form-control" name="zelja" id="exampleFormControlTextarea1" rows="4" placeholder="Dragi Deda Mraze..."></textarea>
+        </div>
+            
+        <div class="form-group">
+          <div class="form-check">
+            <input class="form-check-input" name="esi_mi_dobar" value="NE" type="hidden">
+            <input class="form-check-input" type="checkbox" id="gridCheck" name="esi_mi_dobar" value="DA">
+            <label class="form-check-label" for="gridCheck">Esi mi dobar?</label>
+          </div>
+        </div>
+        
+        <button type="submit" class="btn btn-primary btn-lg">Pošaljite želju</button>
+
+      </form>
+    </div>
+
+    <script>
+      $('#dijete').click(function(){
+        $("#forma").show(); 
+        $("#dijete").remove();
+        $("#dedamraz").remove();
+      });
+
+      $('#dedamraz').click( ()=>{
+        window.open("sve_zelje.php")
+      });
+    </script>
+
+
+</body>
+</html>
